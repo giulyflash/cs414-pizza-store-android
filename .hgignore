@@ -1,0 +1,7 @@
+syntax: glob
+bin
+libs
+.classpath
+project.properties
+.project
+res
