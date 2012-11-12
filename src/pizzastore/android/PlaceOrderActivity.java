@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -34,7 +35,8 @@ public class PlaceOrderActivity extends BaseActivity {
         for(int couponId : store.getCustomerCouponIds(customerUsername)){
         	RadioButton couponButton = new RadioButton(this);
         	couponButton.setText("Free " + store.getMenuItemName(couponId) + ": " + store.getMenuItemDescription(couponId));
-        	couponButton.setId(couponId);
+        	//hack - assumes there are less than 1000 items (to differentiate coupon id from menuitem ids)
+        	couponButton.setId(1000+couponId);
         	couponLayout.addView(couponButton);
         }
               
@@ -92,6 +94,30 @@ public class PlaceOrderActivity extends BaseActivity {
    
     private void submitOrder(){
     	//TODO: submit order
+    	CheckBox deliveryCheckBox = (CheckBox) findViewById(R.id.deliveryCheckBox);
+    	int orderId = store.startNewOrder(customerUsername, deliveryCheckBox.isChecked());
+    	for(int couponId : store.getCouponIds()){
+    		if(((RadioButton) findViewById(1000 + couponId))!=null){
+    			if(((RadioButton) findViewById(1000 + couponId)).isChecked()){
+    				store.setOrderCoupon(orderId, couponId);
+    			}
+    		}
+    	}
+    	for(int menuItemId : store.getMenuItems()){
+    		String itemQuantity = ((EditText) findViewById(menuItemId)).getText().toString();
+    		if(!(itemQuantity.equals("0") ||  itemQuantity.equals(""))){
+    			store.addItemToOrder(orderId, menuItemId, new Integer(itemQuantity));
+    		}
+    	}
+    	String dailySpecialQuantity = ((EditText) findViewById(R.id.dailySpecialQuantity)).getText().toString();
+    	if(!(dailySpecialQuantity.equals("0") ||  dailySpecialQuantity.equals(""))){
+    		store.addItemToOrder(orderId, R.id.dailySpecialQuantity, new Integer(dailySpecialQuantity));
+    	}
+    	store.submitOrder(orderId);
+    	System.out.println(orderId);
+    	System.out.println(store.getSubmittedOrders().size());
+    	
+    	System.out.println(store.getSubmittedOrderToHtmlString(orderId));
     }
 
     @Override

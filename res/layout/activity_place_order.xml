@@ -11,6 +11,12 @@
 	        android:layout_height="match_parent"
 	        android:text="@string/submit" />
     <!-- Coupons -->
+
+    <CheckBox
+        android:id="@+id/deliveryCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delivery" />
 
     <TextView
         android:id="@+id/textView1"
