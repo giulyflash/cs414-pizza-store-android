@@ -41,7 +41,6 @@ public class PizzaKioskActivity extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
         	
             public void onClick(View v) {
-            	 System.out.println( ((EditText)findViewById(R.id.editText1)).getText().toString() );
             	username = ((EditText) findViewById(R.id.editText1)).getText().toString();
                 if(!store.customerExists(username)){
             		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(

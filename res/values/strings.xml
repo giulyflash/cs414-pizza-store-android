@@ -18,5 +18,8 @@
     <string name="view_history">View Order History</string>
     <string name="title_activity_place_order">PlaceOrderActivity</string>
     <string name="title_activity_view_history">ViewHistoryActivity</string>
+    <string name="coupons">Coupons</string>
+    <string name="daily_special">Daily Special</string>
+    <string name="menu">Menu</string>
 
 </resources>

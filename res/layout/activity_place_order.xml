@@ -1,14 +1,91 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <Button
+	        android:id="@+id/button1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:text="@string/submit" />
+    <!-- Coupons -->
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/place_order"
-        tools:context=".PlaceOrderActivity" />
+        android:text="@string/coupons"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+   <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_special"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    <!-- Daily Special -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+   
+	 <TextView
+	        android:id="@+id/descriptionTextview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Medium Text"/>
+
+	  <EditText
+	      android:id="@+id/dailySpecialQuantity"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_weight="1"
+	      android:ems="10"
+	      android:inputType="number" >
+
+	      <requestFocus />
+	  </EditText>
+
+
+
+	</LinearLayout>
+	
+    <!-- Other Items -->
+   <TextView
+	        android:id="@+id/textView3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/menu"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	<ScrollView
+	      android:id="@+id/scrollView1"
+	      android:layout_width="wrap_content"
+	      android:layout_height="match_parent" >
+	    <LinearLayout
+	        android:id="@+id/menuLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	    </LinearLayout>
+
+   </ScrollView>
+   
+	
+
+</LinearLayout>

@@ -39,6 +39,7 @@ public class PizzaStoreFacade implements PizzaStoreFacadeInterface {
 		}	
 		//set daily special to first pizza item
 		//setDailySpecial(getMenuItemsByType(MenuItemType.PIZZA).get(0), "7.50");
+		setDailySpecial("Daily Special", "4.00", MenuItemType.SIDE, "special side");
 		
 		//create default coupons
 		//second pizza item
