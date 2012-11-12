@@ -24,9 +24,20 @@
         </activity>
         <activity android:name=".ExistingUserMainActivity" >
         </activity>
+        <activity android:name="PlaceOrderActivity" >
+        </activity>
         <activity
-            android:name=".ExistingUserMainScreen"
-            android:label="@string/title_activity_existing_user_main_screen" >
+            android:name=".PlaceOrderActivity"
+            android:label="@string/title_activity_place_order" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewHistoryActivity"
+            android:label="@string/title_activity_view_history" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

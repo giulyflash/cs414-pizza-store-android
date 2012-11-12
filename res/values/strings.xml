@@ -14,5 +14,9 @@
     <string name="zip">Zip Code</string>
     <string name="submit">Submit</string>
     <string name="title_activity_existing_user_main_screen">ExistingUserMainScreen</string>
+    <string name="place_order">Place Order</string>
+    <string name="view_history">View Order History</string>
+    <string name="title_activity_place_order">PlaceOrderActivity</string>
+    <string name="title_activity_view_history">ViewHistoryActivity</string>
 
 </resources>
