@@ -24,6 +24,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class PlaceOrderActivity extends BaseActivity {
+	
+	private static int orderId;
 
 	
     @Override
@@ -114,15 +116,19 @@ public class PlaceOrderActivity extends BaseActivity {
     		store.addItemToOrder(orderId, R.id.dailySpecialQuantity, new Integer(dailySpecialQuantity));
     	}
     	store.submitOrder(orderId);
-    	System.out.println(orderId);
-    	System.out.println(store.getSubmittedOrders().size());
-    	
-    	System.out.println(store.getSubmittedOrderToHtmlString(orderId));
+    	PlaceOrderActivity.orderId = orderId;
+    	Context context = this;
+    	Intent intent = new Intent(context, ReceiptActivity.class);
+        startActivity(intent); 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_place_order, menu);
         return true;
+    }
+    
+    public static int getOrderId(){
+    	return orderId;
     }
 }

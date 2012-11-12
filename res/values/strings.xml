@@ -22,5 +22,6 @@
     <string name="daily_special">Daily Special</string>
     <string name="menu">Menu</string>
     <string name="delivery">Delivery</string>
+    <string name="title_activity_receipt">ReceiptActivity</string>
 
 </resources>
