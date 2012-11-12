@@ -7,6 +7,12 @@
     <string name="welcome">Welcome to the Pizza Kiosk!</string>
     <string name="enterUserNamehint">Enter your username</string>
     <string name="new_user">New user</string>
-    <string name="username">Enter your username:</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
+    <string name="address">Street Address</string>
+    <string name="citystate">City, State</string>
+    <string name="zip">Zip Code</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_existing_user_main_screen">ExistingUserMainScreen</string>
 
 </resources>

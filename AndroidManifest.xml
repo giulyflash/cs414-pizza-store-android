@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".PizzaKiosk"
+            android:name=".PizzaKioskActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="NewUser"></activity>
+        <activity android:name=".NewUserActivity" >
+        </activity>
+        <activity android:name=".ExistingUserMainActivity" >
+        </activity>
+        <activity
+            android:name=".ExistingUserMainScreen"
+            android:label="@string/title_activity_existing_user_main_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
