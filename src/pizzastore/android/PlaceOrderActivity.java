@@ -113,7 +113,7 @@ public class PlaceOrderActivity extends BaseActivity {
     	}
     	String dailySpecialQuantity = ((EditText) findViewById(R.id.dailySpecialQuantity)).getText().toString();
     	if(!(dailySpecialQuantity.equals("0") ||  dailySpecialQuantity.equals(""))){
-    		store.addItemToOrder(orderId, R.id.dailySpecialQuantity, new Integer(dailySpecialQuantity));
+    		//store.addItemToOrder(orderId, R.id.dailySpecialQuantity, new Integer(dailySpecialQuantity));
     	}
     	store.submitOrder(orderId);
     	PlaceOrderActivity.orderId = orderId;
