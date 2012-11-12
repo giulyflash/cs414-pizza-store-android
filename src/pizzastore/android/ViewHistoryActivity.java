@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class ViewHistoryActivity extends Activity {
+public class ViewHistoryActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

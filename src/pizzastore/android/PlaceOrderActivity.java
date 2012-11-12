@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class PlaceOrderActivity extends Activity {
+public class PlaceOrderActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
