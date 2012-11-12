@@ -33,7 +33,9 @@ public final class R {
         public static final int linearLayout3=0x7f08000a;
         public static final int listView3=0x7f08000b;
         public static final int menuLayout=0x7f080012;
-        public static final int menu_settings=0x7f080014;
+        public static final int menu_settings=0x7f080016;
+        public static final int orders=0x7f080015;
+        public static final int points=0x7f080014;
         public static final int receipt=0x7f080013;
         public static final int scrollView1=0x7f080011;
         public static final int textView1=0x7f080000;
@@ -70,12 +72,14 @@ public final class R {
         public static final int name=0x7f050008;
         public static final int new_user=0x7f050006;
         public static final int place_order=0x7f05000e;
+        public static final int points=0x7f050018;
         public static final int submit=0x7f05000c;
         public static final int title_activity_existing_user_main_screen=0x7f05000d;
         public static final int title_activity_main=0x7f050003;
         public static final int title_activity_place_order=0x7f050010;
         public static final int title_activity_receipt=0x7f050016;
         public static final int title_activity_view_history=0x7f050011;
+        public static final int title_activity_view_order_history=0x7f050017;
         public static final int username=0x7f050007;
         public static final int view_history=0x7f05000f;
         public static final int welcome=0x7f050004;

@@ -27,31 +27,10 @@
         <activity android:name="PlaceOrderActivity" >
         </activity>
         <activity
-            android:name=".PlaceOrderActivity"
-            android:label="@string/title_activity_place_order" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".ViewHistoryActivity" >
         </activity>
         <activity
-            android:name=".ViewHistoryActivity"
-            android:label="@string/title_activity_view_history" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ReceiptActivity"
-            android:label="@string/title_activity_receipt" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".ReceiptActivity" >
         </activity>
     </application>
 

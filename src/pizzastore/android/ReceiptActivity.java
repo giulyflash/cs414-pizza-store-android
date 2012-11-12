@@ -12,7 +12,7 @@ public class ReceiptActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receipt);
         TextView receipt = (TextView) findViewById(R.id.receipt);
-        receipt.setText(store.getSubmittedOrderToHtmlString(PlaceOrderActivity.getOrderId()));
+        receipt.setText(store.getTransactionReciept(PlaceOrderActivity.getOrderId()));
     }
 
     @Override

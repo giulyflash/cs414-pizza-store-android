@@ -4,11 +4,24 @@
     android:layout_height="match_parent" >
 
     <TextView
+        android:id="@+id/points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/view_history"
+        android:layout_marginTop="26dp"
+        android:text="@string/points"
         tools:context=".ViewHistoryActivity" />
+
+    <LinearLayout
+        android:id="@+id/orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/points"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="87dp"
+        android:orientation="vertical" >
+    </LinearLayout>
 
 </RelativeLayout>

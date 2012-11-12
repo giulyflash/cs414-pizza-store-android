@@ -23,5 +23,7 @@
     <string name="menu">Menu</string>
     <string name="delivery">Delivery</string>
     <string name="title_activity_receipt">ReceiptActivity</string>
+    <string name="title_activity_view_order_history">ViewOrderHistory</string>
+    <string name="points">User points</string>
 
 </resources>

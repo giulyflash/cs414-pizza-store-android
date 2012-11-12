@@ -265,7 +265,11 @@ public class PizzaStoreFacade implements PizzaStoreFacadeInterface {
 	}
 	
 	public String getTransactionReciept(int transactionID){
-		return CentralTracker.getTransaction(transactionID).getSale().generateReceipt();
+		Transaction transaction = CentralTracker.getTransaction(transactionID);
+		if(transaction.isComplete()){
+			return transaction.getSale().generateReceipt();
+		}
+		return CentralTracker.getTransaction(transactionID).getOrder().toString();
 	}
     /**
 	 * marks the order specified by the ID complete

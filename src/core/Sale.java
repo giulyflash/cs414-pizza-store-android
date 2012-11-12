@@ -23,11 +23,7 @@ public class Sale {
 		//payment
 		
 		String receipt = order.toString();
-		
-
-		receipt += "------------\n";
-		receipt += "Total: " + this.getCost().toString() + "\n\n";
-		
+		receipt+= "\n";
 		
 		receipt+=payment.toString();	
 		

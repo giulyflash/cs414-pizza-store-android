@@ -147,6 +147,8 @@ public class Order{
 			MenuItem menuItem = menu.getMenuItemById(orderItem.getId());
 			result +=  menuItem.getName() + "\t" + menuItem.getPrice() + "\tx" + orderItem.getQuantity() + "\n";
 		}
+		result += "-------------\n";
+		result += "total: " + getTotal();
 		return result;
 	}
 
